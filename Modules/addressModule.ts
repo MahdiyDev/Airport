@@ -3,6 +3,8 @@ import Address from "../Schemas/addressSchema"
 
 const GET_ADDRESS = `
     select * from addresses
+    inner join planes
+    on addresses.address_ref_plane = planes.plane_uid
 `
 
 const POST_ADDRESS = `

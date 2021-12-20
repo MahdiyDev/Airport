@@ -3,6 +3,10 @@ import Tickets from "../Schemas/ticketsSchema"
 
 const GET_TICKETS = `
     select * from tickets
+    inner join passengers
+    on tickets.ticket_ref_passenger = passengers.passenger_uid
+    inner join addresses
+    on tickets.ticket_ref_address = addresses.address_uid
 `
 
 const POST_TICKETS = `
