@@ -1,7 +1,7 @@
 import { Application } from 'express'
 const express = require('express')
 const cors = require('cors')
-import router from './Routes/'
+import router from './src/Routes'
 
 const app: Application = express()
 
